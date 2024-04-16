@@ -1,0 +1,63 @@
+button{
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    text-align: inherit;
+    text-decoration: none;
+    text-transform: none;
+    background-color: transparent;
+    color: inherit;
+    border: none;
+}
+
+.block {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 стовпці з однаковою шириною */
+  grid-gap: 20px; /* Проміжок між стовпцями */
+  grid-auto-rows: minmax(100px, auto); /* Висота рядка: 200px мінімум, автоматично розширюється */
+}
+
+.block-container {
+  grid-column: span 1 / span 3; /* Займає весь рядок */
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  transition: 0.3s;
+}
+
+.block-container .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.block-container .btn img {
+  margin-right: 10px;
+}
+
+.block-container .btn p {
+  font-weight: bold;
+}
+
+.block-container .content {
+  display: none;
+  width: 100%;
+  max-width: 350px; /* Максимальна ширина стовпця */
+  margin: 0 auto;
+  transition: 0.3s;
+}
+
+.block-container .content p {
+  font-size: 14px;
+  line-height: 1.6;
+}  
+span{
+  font-size: 10px;
+}
